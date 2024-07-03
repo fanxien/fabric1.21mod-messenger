@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "messenger",
+	"version": "${version}",
+	"name": "Messenger",
+	"description": "一个通过信使在玩家之间来传送物品的模组",
+	"authors": [
+		"FISH_a"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/messenger/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fish.modid.Messenger"
+		],
+		"fabric-datagen": [
+			"fish.modid.MessengerDataGenerator"
+		],
+		"client": [
+			"fish.modid.MessengerClient"
+		]
+	},
+	"mixins": [
+		"messenger.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
